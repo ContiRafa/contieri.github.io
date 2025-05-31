@@ -1,0 +1,276 @@
+<html>
+
+<head>
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <!-------------------------CALENDÁRIO------------------------>
+
+
+    <div class="calendar-widget">
+        <div class="calendar-header">
+            <button onclick="changeMonth(-1)">&#9665;</button>
+            <div id="month-year"></div>
+            <button onclick="changeMonth(1)">&#9655;</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>D</th>
+                    <th>S</th>
+                    <th>T</th>
+                    <th>Q</th>
+                    <th>Q</th>
+                    <th>S</th>
+                    <th>S</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+
+        <div class="container-button">
+            <h3>BUSCAR POR:</h3>
+            <div class="options-date">
+
+                <button class="today" onclick="changeDate()">Dia</button>
+                <button class="today" onclick="changeDate()">Semana</button>
+                <button class="today" onclick="changeDate()">Mês</button>
+                <button class="today" onclick="changeDate()">Ano</button>
+            </div>
+        </div>
+
+        <div class="busca-profissional">
+            <h3>PROFISSIONAL</h3>
+            <div class="profissionais-div">
+                <select name="" id="">
+                    <option value="">Selecione</option>
+                    <option value="">NELI</option>
+                    <option value="">FUNCIONÁRIA 1</option>
+
+
+                </select>
+            </div>
+        </div>
+
+        <div class="container-agendamento">
+            <div class="agendamento">
+                <button class="open-modal-btn" onclick="openModal()">Abrir Formulário</button>
+                <button class="bt-01" id="">SAIR</button>
+            </div>
+        </div>
+
+        <!-- Botão para abrir o modal -->
+        
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Formulário</h2>
+                <form id="formulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-------------------------CORPO DA AGENDA------------------------>
+
+
+    </div>
+    <div class="calendar">
+        <div class="calendar-body">
+            <div class="time-column">
+                <div></div>
+                <div>00h</div>
+                <div>01h</div>
+                <div>02h</div>
+                <div>03h</div>
+                <div>04h</div>
+                <div>05h</div>
+                <div>06h</div>
+                <div>07h</div>
+                <div>08h</div>
+                <div>09h</div>
+                <div>10h</div>
+                <div>11h</div>
+                <div>12h</div>
+                <div>13h</div>
+                <div>14h</div>
+                <div>15h</div>
+                <div>16h</div>
+                <div>17h</div>
+                <div>18h</div>
+                <div>19h</div>
+                <div>20h</div>
+                <div>21h</div>
+                <div>22h</div>
+                <div>23h</div>
+
+            </div>
+            <div class="days-column">
+                <div class="day">
+                    <div class="day-header">
+                        <span class="day-name">DOM.</span>
+                        <span class="day-number"></span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="day">
+                    <div class="day-header">
+                        <span class="day-name">SEG.</span>
+                        <span class="day-number"></span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="day">
+                    <div class="day-header">
+                        <span class="day-name">TER.</span>
+                        <span class="day-number"></span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="day">
+                    <div class="day-header">
+                        <span class="day-name">QUA.</span>
+                        <span class="day-number"></span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="day">
+                    <div class="day-header">
+                        <span class="day-name">QUI.</span>
+                        <span class="day-number"></span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="day">
+                    <div class="day-header">
+                        <span class="day-name">SEX.</span>
+                        <span class="day-number"></span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="day">
+                    <div class="day-header">
+                        <span class="day-name">SÁB.</span>
+                        <span class="day-number"></span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

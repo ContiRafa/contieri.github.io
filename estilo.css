@@ -1,0 +1,393 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f1f3f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sidebar button i {
+    margin-right: 10px;
+}
+
+.calendar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.calendar-header div {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.calendar-body {
+    flex: 1;
+    display: flex;
+    overflow-y: auto;
+}
+
+.calendar-body .time-column {
+    width: 60px;
+    border-right: 1px solid #dadce0;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.calendar-body .time-column div {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.calendar-body .days-column {
+    flex: 1;
+    display: flex;
+}
+
+.calendar-body .days-column .day {
+    flex: 1;
+    border-right: 1px solid #dadce0;
+}
+
+.calendar-body .days-column .day div {
+    height: 60px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.calendar-body .days-column .day:last-child {
+    border-right: none;
+}
+
+.calendar-body .days-column .day-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #dadce0;
+}
+
+.calendar-body .days-column .day-header span {
+    display: block;
+}
+
+.calendar-body .days-column .day-header .day-name {
+    font-size: 14px;
+}
+
+.calendar-body .days-column .day-header .day-number {
+    font-size: 24px;
+}
+
+.sidebar .calendar-widget {
+    margin-bottom: 20px;
+
+}
+
+.sidebar .calendar-widget table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sidebar .calendar-widget th,
+.sidebar .calendar-widget td {
+    text-align: center;
+    padding: 5px;
+}
+
+.sidebar .calendar-widget th {
+    font-weight: normal;
+    color: #5f6368;
+}
+
+.sidebar .calendar-widget td {
+    cursor: pointer;
+}
+
+.sidebar .calendar-widget .selected {
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 50%;
+}
+
+.sidebar .search-people {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sidebar .search-people i {
+    margin-right: 10px;
+}
+
+.sidebar .agendas {
+    margin-bottom: 20px;
+}
+
+.sidebar .agendas div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.sidebar .agendas div i {
+    font-size: 12px;
+}
+
+.calendar-widget {
+    width: 350px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-style: solid;
+    height: 100%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    cursor: pointer;
+}
+
+.today {
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+.selected {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5%;
+}
+
+.today {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5%;
+}
+
+.container-button {
+    margin-top: 50px;
+    height: 100px;
+
+}
+
+.options-date {
+    display: flex;
+    justify-content: center;
+}
+
+.options-date>button {
+    width: 100px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.bt-00 {
+    border-radius: 5px;
+    background-color: #0a192feb;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.bt-01 {
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    border: black;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 5px;
+}
+
+.busca-profissional {
+    margin-top: 50px;
+}
+
+.profissionais-div>select {
+    width: 100%;
+    height: 35px;
+}
+
+.container-agendamento {
+    margin-top: 100px;
+}
+
+.agendamento {
+    margin-top: 50px;
+}
+
+/*MODAL*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+/* Botão de fechar (x) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Controle do checkbox para exibir o modal */
+#modalToggle:checked + .modal {
+    display: block;
+}
+
+/* Estilo do botão para abrir o modal */
+.open-modal {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.open-modal:hover {
+    background: #0056b3;
+}
+
+/* Esconder o checkbox */
+#modalToggle {
+    display: none;
+}
+
+
+/*modal*/
+/* Botão para abrir o modal */
+.open-modal-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.open-modal-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
